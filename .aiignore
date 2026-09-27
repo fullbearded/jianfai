@@ -1,0 +1,24 @@
+# AI 助手上下文排除（JetBrains .aiignore 格式；Cursor/Copilot 可复制为 .cursorignore / .copilotignore）
+
+# 依赖与产物（大文件，纯噪音）
+node_modules/
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+
+# 生成的锁文件（git 要提交，AI 不需要读）
+package-lock.json
+
+# 二进制资源（AI 用不上）
+docs/public/**/*.png
+docs/public/**/*.jpg
+docs/public/**/*.jpeg
+docs/public/**/*.webp
+docs/public/**/*.woff
+docs/public/**/*.woff2
+
+# 系统与日志
+.DS_Store
+Thumbs.db
+*.log
+.git/
+docs/.vitepress/config.mts.timestamp-*.mjs

@@ -1,0 +1,468 @@
+/**
+ * 简法 JIANF·AI 主题
+ * 方向：清晰、可信、适合第一次使用 AI 的人
+ */
+:root {
+  --jf-ink-blue: #092747;
+  --jf-ink-blue-2: #163b63;
+  --jf-orange: #c34d18;
+  --jf-orange-deep-bg: #ff7742;
+  --jf-slate: #5e7287;
+  --jf-bg: #fbfbf8;
+  --jf-bg-soft: #f3f5f2;
+  --jf-bg-mist: #e9eeeb;
+  --jf-text-1: #172331;
+  --jf-text-2: #5f6f7d;
+  --jf-text-3: #88939b;
+  --jf-line: #dce2de;
+  --jf-line-strong: #b8c4bd;
+  --jf-deep-bg: #0a1e34;
+  --jf-deep-bg-2: #112c4b;
+  --jf-deep-text: #eff3f2;
+  --jf-deep-text-2: #b2c1cb;
+  --jf-deep-text-3: #708799;
+  --jf-deep-line: rgba(239, 243, 242, .16);
+  --jf-display: 'Avenir Next', 'SF Pro Display', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --jf-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --jf-mono: 'SFMono-Regular', 'JetBrains Mono', Consolas, monospace;
+  --jf-wordmark-jf: .06em;
+  --jf-wordmark-gap: .11em;
+  --jf-wordmark-ai: -.02em;
+  --vp-c-brand-1: var(--jf-ink-blue);
+  --vp-c-brand-2: var(--jf-ink-blue-2);
+  --vp-c-brand-3: var(--jf-ink-blue);
+  --vp-c-brand-soft: rgba(9, 39, 71, .09);
+  --vp-c-bg: var(--jf-bg);
+  --vp-c-bg-alt: var(--jf-bg-soft);
+  --vp-c-bg-elv: #fff;
+  --vp-c-bg-soft: var(--jf-bg-mist);
+  --vp-c-divider: var(--jf-line);
+  --vp-c-gutter: var(--jf-line);
+  --vp-c-text-1: var(--jf-text-1);
+  --vp-c-text-2: var(--jf-text-2);
+  --vp-c-text-3: var(--jf-text-3);
+  --vp-font-family-base: var(--jf-body);
+  --vp-font-family-mono: var(--jf-mono);
+  --vp-nav-bg-color: rgba(251, 251, 248, .9);
+  --vp-sidebar-bg-color: var(--jf-bg-soft);
+  --vp-code-block-bg: var(--jf-deep-bg);
+  --vp-code-block-color: var(--jf-deep-text);
+  --vp-code-lang-color: var(--jf-orange-deep-bg);
+}
+.dark {
+  --jf-ink-blue: #9bbce0;
+  --jf-ink-blue-2: #b8d2ee;
+  --jf-orange: #ff8b5d;
+  --jf-bg: #0b1726;
+  --jf-bg-soft: #102239;
+  --jf-bg-mist: #17304a;
+  --jf-text-1: #eff3f2;
+  --jf-text-2: #b2c1cb;
+  --jf-text-3: #71869a;
+  --jf-line: #25405e;
+  --jf-line-strong: #3d5c7b;
+  --vp-c-brand-1: #9bbce0;
+  --vp-c-brand-2: #b8d2ee;
+  --vp-c-brand-3: #9bbce0;
+  --vp-c-brand-soft: rgba(155, 188, 224, .14);
+  --vp-c-bg: #0b1726;
+  --vp-c-bg-alt: #0e1f33;
+  --vp-c-bg-elv: #122943;
+  --vp-c-bg-soft: #142c47;
+  --vp-c-divider: #25405e;
+  --vp-c-gutter: #25405e;
+  --vp-c-text-1: #eff3f2;
+  --vp-c-text-2: #b2c1cb;
+  --vp-c-text-3: #71869a;
+  --vp-nav-bg-color: rgba(11, 23, 38, .9);
+  --vp-sidebar-bg-color: #0e1f33;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { min-width: 320px; margin: 0; overflow-x: hidden; font-family: var(--jf-body); background: var(--vp-c-bg); }
+::selection { color: #fff; background: var(--jf-orange); }
+
+/* HomePage replaces VitePress's stock hero. */
+.VPHome .VPHero { display: none; }
+.VPHome .VPHomeFeatures { display: none; }
+.VPContent .VPHome { margin-bottom: 0; }
+.VPHome .VPContent { padding-bottom: 0; }
+.VPHome .VPHomeHero { min-height: 0; }
+.VPHome .VPHomeHero .container { max-width: none; }
+.VPHome .VPFooter { display: none; }
+.home-page .VPFooter { display: none; }
+
+.VPNav { border-bottom: 1px solid var(--vp-c-divider); }
+.VPNavBar { height: 68px; background: var(--vp-nav-bg-color) !important; backdrop-filter: blur(18px); }
+.VPNavBarTitle .title { font-family: var(--jf-display); font-size: 16px; font-weight: 700; letter-spacing: -.02em; }
+.VPNavBarMenuLink, .VPNavBarMenuGroup .text { font-size: 13px; font-weight: 600; }
+.VPNavBarMenuLink { position: relative; transition: color .2s ease, background-color .2s ease; }
+.VPNavBarMenuLink.active { color: var(--vp-c-brand-1); font-weight: 700; }
+.VPNavBarMenuLink.active::after { position: absolute; right: 12px; bottom: 9px; left: 12px; height: 3px; border-radius: 999px; background: var(--jf-orange); content: ''; }
+.VPNavBarAppearance { margin-left: 8px; }
+.VPNavBar .VPNavBarTitle .logo { width: 26px; height: 26px; }
+
+.jf-community-nav { position: relative; display: flex; align-items: center; height: var(--vp-nav-height); }
+.jf-community-nav__trigger { display: inline-flex; align-items: center; gap: 6px; height: 100%; padding: 0 12px; border: 0; background: transparent; color: var(--vp-c-text-1); font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; }
+.jf-community-nav__trigger:hover, .jf-community-nav__trigger:focus-visible { color: var(--vp-c-brand-1); }
+.jf-community-nav__chevron { color: var(--jf-text-3); font-size: 16px; line-height: 1; transform: translateY(-3px); }
+.jf-community-nav__popover { position: absolute; top: calc(100% + 10px); right: 4px; z-index: 30; display: grid; grid-template-columns: 150px 1fr; gap: 12px; width: 300px; padding: 12px; border: 1px solid var(--jf-line); border-radius: 12px; background: var(--vp-c-bg-elv); box-shadow: 0 18px 44px rgba(10, 30, 52, .18); opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(6px); transition: opacity .18s ease, transform .18s ease, visibility .18s ease; }
+.jf-community-nav__popover::before { position: absolute; top: -6px; right: 27px; width: 10px; height: 10px; border-top: 1px solid var(--jf-line); border-left: 1px solid var(--jf-line); background: var(--vp-c-bg-elv); content: ''; transform: rotate(45deg); }
+.jf-community-nav__popover img { display: block; width: 150px; height: 150px; border-radius: 7px; object-fit: cover; }
+.jf-community-nav__copy { display: flex; flex-direction: column; justify-content: center; gap: 8px; min-width: 0; }
+.jf-community-nav__copy span { color: var(--jf-orange); font-family: var(--jf-mono); font-size: 9px; letter-spacing: .11em; }
+.jf-community-nav__copy strong { color: var(--vp-c-text-1); font-size: 14px; line-height: 1.45; white-space: normal; }
+.jf-community-nav__copy small { color: var(--vp-c-text-2); font-size: 12px; line-height: 1.6; white-space: normal; }
+.jf-community-nav:hover .jf-community-nav__popover, .jf-community-nav:focus-within .jf-community-nav__popover, .jf-community-nav.is-open .jf-community-nav__popover { opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0); }
+.jf-wordmark--light .jf { color: #fff !important; }
+.jf-wordmark--light .dot { color: var(--jf-deep-text-3) !important; }
+.jf-wordmark--light .ai { color: var(--jf-orange-deep-bg) !important; }
+
+/* 触屏设备统一使用汉堡导航，避免 768px 左右的半桌面状态。 */
+@media (max-width: 959px) {
+  .VPNavBar .VPNavBarMenu { display: none; }
+  .VPNavBar .VPNavBarHamburger { display: flex; }
+  .VPNav .VPNavScreen { display: block; }
+}
+
+@media (max-width: 767px) {
+  .VPNavBar .jf-community-nav { display: none; }
+  .jf-community-nav--screen { display: block; height: auto; margin-top: 18px; }
+  .jf-community-nav--screen .jf-community-nav__trigger { display: flex; justify-content: space-between; width: 100%; min-height: 46px; padding: 0 0 12px; border-bottom: 1px solid var(--vp-c-divider); font-size: 15px; }
+  .jf-community-nav--screen .jf-community-nav__popover { position: static; grid-template-columns: 112px 1fr; width: 100%; margin-top: 12px; padding: 10px; border-radius: 9px; box-shadow: none; opacity: 1; visibility: visible; pointer-events: auto; transform: none; }
+  .jf-community-nav--screen .jf-community-nav__popover::before { display: none; }
+  .jf-community-nav--screen:not(.is-open) .jf-community-nav__popover { display: none; }
+  .jf-community-nav--screen .jf-community-nav__popover img { width: 112px; height: 112px; }
+  .jf-community-nav--screen .jf-community-nav__copy { gap: 6px; }
+  .jf-community-nav--screen .jf-community-nav__copy strong { font-size: 13px; }
+}
+
+.jf-wordmark { display: inline-flex; align-items: baseline; color: inherit; font-family: var(--jf-display); white-space: nowrap; }
+.jf-wordmark .jf { color: var(--jf-ink-blue); font-weight: 650; letter-spacing: var(--jf-wordmark-jf); }
+.jf-wordmark .dot { margin: 0 calc(var(--jf-wordmark-gap) * .5); color: var(--jf-slate); font-weight: 400; }
+.jf-wordmark .ai { color: var(--jf-orange); font-weight: 800; letter-spacing: var(--jf-wordmark-ai); }
+.dark .jf-wordmark .jf { color: var(--jf-deep-text); }
+.dark .jf-wordmark .ai { color: var(--jf-orange-deep-bg); }
+
+.jf-five-step { display: flex; align-items: center; gap: 9px; }
+.jf-five-step .seg { flex: 1; max-width: 64px; height: 5px; border-radius: 2px; background: var(--jf-slate); opacity: .35; transition: background .2s ease, opacity .2s ease; }
+.jf-five-step .seg.current { background: var(--jf-orange-deep-bg); opacity: 1; }
+.jf-five-step .seg.done { opacity: .8; }
+.jf-five-step-wrap { display: flex; flex-direction: column; gap: 8px; }
+.jf-five-step-labels { display: flex; gap: 10px; color: var(--jf-text-2); font-size: 11px; }
+.jf-five-step-labels span { flex: 1; max-width: 64px; overflow: hidden; text-align: center; text-overflow: ellipsis; white-space: nowrap; }
+.jf-five-step-labels .active { color: var(--jf-orange); font-weight: 700; }
+
+.vp-doc { font-size: 16px; line-height: 1.9; }
+.vp-doc h1 { font-weight: 750; letter-spacing: -.035em; }
+.vp-doc h2 { margin-top: 48px; padding-bottom: 10px; border-bottom: 1px solid var(--vp-c-divider); font-size: 26px; font-weight: 700; letter-spacing: -.025em; }
+.vp-doc h2::before { display: inline-block; width: 18px; height: 5px; margin-right: 10px; vertical-align: middle; border-radius: 2px; background: var(--jf-orange); content: ''; }
+.vp-doc h3 { margin-top: 34px; font-size: 20px; font-weight: 650; }
+.vp-doc a { color: var(--vp-c-brand-1); text-underline-offset: 3px; }
+.vp-doc blockquote { margin: 24px 0; padding: 16px 22px; border-left: 4px solid var(--jf-orange); border-radius: 0 6px 6px 0; background: var(--vp-c-bg-soft); }
+.vp-doc .custom-block { border-radius: 6px; }
+.vp-doc table { width: 100%; border-collapse: collapse; }
+.vp-doc th { background: var(--jf-ink-blue); color: #fff; }
+.dark .vp-doc th { background: #173555; }
+.vp-doc tr:nth-child(2n) { background: var(--vp-c-bg-soft); }
+.vp-doc div[class*='language-'] { border-radius: 8px; }
+.jf-qr { width: 180px; border: 1px solid var(--vp-c-divider); border-radius: 10px; }
+.VPDoc .content-container { max-width: 820px !important; }
+.VPDoc .aside-container { padding-left: 5px; }
+
+@media (max-width: 760px) {
+  .VPNavBar { height: 60px; }
+  .VPNavBarTitle .title { font-size: 15px; }
+  .VPNavBarMenuLink, .VPNavBarMenuGroup .text { font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+
+/* ============================================================
+ * 左侧目录导航（.VPSidebar）— 让分组 / 可折叠组 / 叶子链接三层
+ * 各有分量，活跃态用墨蓝主色 + 2px 橙色左标记代替整条橙底，
+ * 维持「橙是锤子不是颜料」品牌纪律。
+ * ============================================================ */
+/* 隐藏 VitePress 默认右侧 caret 与 indicator：指示符统一由左侧自绘 chevron
+ * 承担，避免双箭头。整行仍是 role=button，可点击不受影响。 */
+.VPSidebar .VPSidebarItem .caret,
+.VPSidebar .VPSidebarItem > .item > .indicator {
+  display: none !important;
+}
+:root {
+  /* 加宽侧边栏，容纳较长的中文标题，避免大量换行 */
+  --vp-sidebar-width: 288px;
+}
+.VPSidebar.VPSidebar {
+  background: var(--vp-sidebar-bg-color);
+  font-family: var(--jf-body);
+  border-right: 1px solid var(--vp-c-divider);
+  padding: 16px 32px 64px;
+}
+.VPSidebar.has-sidebar .VPSidebarItem.level-0 {
+  margin: 0;
+}
+/* —— 第 1 层：分组标题（栏目块名，如「WorkBuddy 从入门到放弃」） —— */
+.VPSidebar .VPSidebarItem.level-0 > .item > .text,
+.VPSidebar .VPSidebarItem.level-0 > .item > .link > .text {
+  display: block;
+  padding: 14px 12px 8px;
+  color: var(--vp-c-text-1);
+  font-family: var(--jf-display);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .02em;
+  line-height: 1.35;
+  text-transform: none;
+  border-top: 1px solid var(--vp-c-divider);
+  overflow-wrap: anywhere;
+}
+.VPSidebar .VPSidebarItem.level-0:first-child > .item > .text,
+.VPSidebar .VPSidebarItem.level-0:first-child > .item > .link > .text {
+  border-top: 0;
+  padding-top: 4px;
+}
+/* —— 第 2 层：可折叠组标题（序章 / 第一幕 … / 附录） —— */
+.VPSidebar .VPSidebarItem.collapsible.level-1 > .item {
+  position: relative;
+  margin: 6px 0 2px;
+  padding: 0;
+  border-radius: 6px;
+  transition: background-color .15s ease;
+}
+.VPSidebar .VPSidebarItem.collapsible.level-1 > .item > .text,
+.VPSidebar .VPSidebarItem.collapsible.level-1 > .item > .link > .text {
+  display: block;
+  position: relative;
+  padding: 8px 10px 8px 24px;
+  color: var(--vp-c-text-1);
+  font-family: var(--jf-display);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .01em;
+  line-height: 1.4;
+  text-transform: none;
+  border: 0;
+  cursor: pointer;
+  word-break: break-word;
+}
+/* 折叠指示符：用 ::before 画一个细 chevron，替换默认 SVG */
+.VPSidebar .VPSidebarItem.collapsible.level-1 > .item > .text::before,
+.VPSidebar .VPSidebarItem.collapsible.level-1 > .item > .link > .text::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  border-right: 1.5px solid var(--jf-slate);
+  border-bottom: 1.5px solid var(--jf-slate);
+  transform: translateY(-65%) rotate(-45deg);
+  transform-origin: 50% 50%;
+  transition: transform .2s ease, border-color .15s ease;
+  opacity: .75;
+}
+.VPSidebar .VPSidebarItem.collapsible.level-1 > .item:hover {
+  background: var(--vp-c-brand-soft);
+}
+.VPSidebar .VPSidebarItem.collapsible.level-1 > .item:hover > .text::before,
+.VPSidebar .VPSidebarItem.collapsible.level-1 > .item:hover > .link > .text::before {
+  border-color: var(--jf-ink-blue);
+  opacity: 1;
+}
+.VPSidebar .VPSidebarItem.collapsible.level-1.open > .item > .text::before,
+.VPSidebar .VPSidebarItem.collapsible.level-1.open > .item > .link > .text::before {
+  transform: translateY(-35%) rotate(45deg);
+  border-color: var(--jf-ink-blue);
+  opacity: 1;
+}
+/* 折叠组内子项容器：VitePress 默认 .items 有 16px 左内边距，
+ * 叠加链接自身内边距后「边框到文字」过长，这里收窄并补虚线。 */
+.VPSidebar .VPSidebarItem.collapsible.level-1 > .items {
+  padding-left: 8px;
+  border-left: 1px dashed var(--vp-c-divider);
+  margin-left: 13px;
+}
+/* —— 第 3 层：叶子链接 —— */
+.VPSidebar .VPSidebarItem.level-2 > .item {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border-radius: 6px;
+}
+.VPSidebar .VPSidebarItem.level-2 > .item > .link,
+.VPSidebar .VPSidebarItem.level-2 > .item > .link > .text {
+  display: block;
+  position: relative;
+  padding: 6px 8px 6px 10px;
+  color: var(--vp-c-text-2);
+  font-family: var(--jf-body);
+  font-size: 13px;
+  font-weight: 450;
+  line-height: 1.55;
+  letter-spacing: .005em;
+  border: 0;
+  text-decoration: none;
+  word-break: break-word;
+  transition: color .15s ease, background-color .15s ease;
+}
+/* 内层 .text 嵌在 .link 内，若同样带内边距会与 .link 叠加成双倍缩进，这里归零。 */
+.VPSidebar .VPSidebarItem.level-2 > .item > .link > .text,
+.VPSidebar .VPSidebarItem.level-1:not(.collapsible) > .item > .link > .text {
+  padding: 0;
+}
+/* 叶子链接的微缩进条（默认隐藏，仅 hover / 活跃态显示） */
+.VPSidebar .VPSidebarItem.level-2 > .item > .link::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  width: 2px;
+  height: 0;
+  background: var(--jf-ink-blue);
+  border-radius: 2px;
+  transform: translateY(-50%);
+  transition: height .15s ease, background-color .15s ease, opacity .15s ease;
+  opacity: 0;
+}
+.VPSidebar .VPSidebarItem.level-2 > .item > .link:hover,
+.VPSidebar .VPSidebarItem.level-2 > .item > .link:hover > .text {
+  color: var(--vp-c-text-1);
+  background: transparent;
+}
+.VPSidebar .VPSidebarItem.level-2 > .item > .link:hover::before {
+  height: 14px;
+  opacity: .35;
+  background: var(--jf-ink-blue);
+}
+/* —— 叶子链接的「栏目总览」等同层（直接挂在 level-1 父组下） —— */
+.VPSidebar .VPSidebarItem.level-1 > .item > .link,
+.VPSidebar .VPSidebarItem.level-1:not(.collapsible) > .item > .link > .text {
+  display: block;
+  position: relative;
+  padding: 7px 12px 7px 10px;
+  margin: 2px 0;
+  color: var(--vp-c-text-2);
+  font-family: var(--jf-body);
+  font-size: 13.5px;
+  font-weight: 500;
+  line-height: 1.55;
+  border-radius: 6px;
+  border: 0;
+  text-decoration: none;
+  word-break: break-word;
+  transition: color .15s ease, background-color .15s ease;
+}
+.VPSidebar .VPSidebarItem.level-1:not(.collapsible) > .item > .link:hover {
+  color: var(--vp-c-text-1);
+  background: var(--vp-c-brand-soft);
+}
+/* —— 活跃态（核心：墨蓝主色 + 2px 橙色左标记，无整条橙底） —— */
+.VPSidebar .VPSidebarItem.is-active > .item {
+  background: var(--vp-c-brand-soft);
+  border-radius: 6px;
+}
+.VPSidebar .VPSidebarItem.level-1.is-active:not(.collapsible) > .item > .link,
+.VPSidebar .VPSidebarItem.level-1.is-active:not(.collapsible) > .item > .link > .text,
+.VPSidebar .VPSidebarItem.level-2.is-active > .item > .link,
+.VPSidebar .VPSidebarItem.level-2.is-active > .item > .link > .text {
+  color: var(--jf-ink-blue);
+  font-weight: 650;
+}
+.dark .VPSidebar .VPSidebarItem.level-1.is-active:not(.collapsible) > .item > .link,
+.dark .VPSidebar .VPSidebarItem.level-1.is-active:not(.collapsible) > .item > .link > .text,
+.dark .VPSidebar .VPSidebarItem.level-2.is-active > .item > .link,
+.dark .VPSidebar .VPSidebarItem.level-2.is-active > .item > .link > .text {
+  color: var(--jf-ink-blue-2);
+}
+/* 用 ::before 在活跃叶子链接左侧打一条 2px 橙色标记 */
+.VPSidebar .VPSidebarItem.level-2.is-active > .item > .link::before,
+.VPSidebar .VPSidebarItem.level-1:not(.collapsible).is-active > .item > .link::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  width: 2px;
+  height: 16px;
+  background: var(--jf-orange);
+  border-radius: 2px;
+  transform: translateY(-50%);
+  opacity: 1;
+  transition: opacity .15s ease;
+}
+/* 可折叠组标题如果其内部有活跃页，让标题也染上墨蓝（提升可扫描性） */
+.VPSidebar .VPSidebarItem.collapsible.level-1.has-active > .item > .text,
+.VPSidebar .VPSidebarItem.collapsible.level-1.has-active > .item > .link > .text {
+  color: var(--jf-ink-blue);
+  font-weight: 650;
+}
+.dark .VPSidebar .VPSidebarItem.collapsible.level-1.has-active > .item > .text,
+.dark .VPSidebar .VPSidebarItem.collapsible.level-1.has-active > .item > .link > .text {
+  color: var(--jf-ink-blue-2);
+}
+/* —— 暗色模式：墨蓝自动切为亮墨蓝（--jf-ink-blue 已切），微调对比 —— */
+.dark .VPSidebar {
+  border-right-color: var(--vp-c-divider);
+}
+.dark .VPSidebar .VPSidebarItem.level-2 > .item > .link,
+.dark .VPSidebar .VPSidebarItem.level-2 > .item > .link > .text,
+.dark .VPSidebar .VPSidebarItem.level-1:not(.collapsible) > .item > .link > .text {
+  color: var(--vp-c-text-2);
+}
+.dark .VPSidebar .VPSidebarItem.level-2 > .item > .link:hover,
+.dark .VPSidebar .VPSidebarItem.level-2 > .item > .link:hover > .text {
+  color: var(--vp-c-text-1);
+}
+.dark .VPSidebar .VPSidebarItem.is-active > .item {
+  background: var(--vp-c-brand-soft);
+}
+.dark .VPSidebar .VPSidebarItem.level-2.is-active > .item > .link::before,
+.dark .VPSidebar .VPSidebarItem.level-1:not(.collapsible).is-active > .item > .link::before {
+  background: var(--jf-orange);
+}
+/* —— 滚动条：与墨蓝夜色对齐，克制 —— */
+.VPSidebar::-webkit-scrollbar { width: 8px; }
+.VPSidebar::-webkit-scrollbar-track { background: transparent; }
+.VPSidebar::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: var(--jf-line-strong);
+}
+.dark .VPSidebar::-webkit-scrollbar-thumb { background: var(--jf-line); }
+/* —— 触摸设备收紧行高，避免汉堡菜单里过挤 —— */
+@media (max-width: 959px) {
+  .VPSidebar .VPSidebarItem.level-2 > .item > .link,
+  .VPSidebar .VPSidebarItem.level-2 > .item > .link > .text {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 14px;
+  }
+  .VPSidebar .VPSidebarItem.collapsible.level-1 > .item > .text,
+  .VPSidebar .VPSidebarItem.collapsible.level-1 > .item > .link > .text {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+  }
+}
+
+/* 宽屏时把侧栏内容对齐到正文左侧，避免布局外侧边距变成空白栏。 */
+@media (min-width: 1280px) {
+  .VPSidebar.VPSidebar {
+    padding-right: 0 !important;
+  }
+  .VPDoc.has-sidebar {
+    padding-left: 16px !important;
+    padding-right: 32px !important;
+  }
+  .VPDoc.has-sidebar .content {
+    padding-left: 0 !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  .VPSidebar.VPSidebar {
+    padding-left: max(32px, calc((100% - (var(--vp-layout-max-width) - 64px)) / 2)) !important;
+    width: calc((100% - (var(--vp-layout-max-width) - 64px)) / 2 + var(--vp-sidebar-width) - 32px) !important;
+  }
+}

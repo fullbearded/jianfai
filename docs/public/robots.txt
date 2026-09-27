@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jianfai.com/sitemap.xml

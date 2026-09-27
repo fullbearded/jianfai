@@ -1,0 +1,22 @@
+{
+  "name": "jianfai-site",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "description": "简法 JIANF·AI 官网 — 用 AI 把工作做得更快、更好、更专业的方法体系与培训品牌",
+  "engines": {
+    "node": ">=20 <25"
+  },
+  "scripts": {
+    "dev": "vitepress dev docs --host 127.0.0.1",
+    "docs:dev": "vitepress dev docs --host 127.0.0.1",
+    "build": "vitepress build docs",
+    "docs:build": "vitepress build docs",
+    "preview": "vitepress preview docs --host 127.0.0.1",
+    "docs:preview": "vitepress preview docs --host 127.0.0.1"
+  },
+  "devDependencies": {
+    "vitepress": "1.6.4"
+  },
+  "license": "MIT"
+}
