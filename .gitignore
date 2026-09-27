@@ -22,6 +22,4 @@ Thumbs.db
 
 # VitePress dev 临时文件
 docs/.vitepress/config.mts.timestamp-*.mjs
-
-# 本地写作规范（含本地绝对路径，不入库，仅本地保留）
-docs/_templates/workbuddy-series-spec.md
+.gstack

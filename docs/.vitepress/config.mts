@@ -65,7 +65,7 @@ export default defineConfig({
           text: 'WorkBuddy 从入门到放弃',
           items: [
             { text: '栏目总览', link: '/workbuddy/' },
-            { text: '序章：先想清楚要不要开始', collapsed: false, items: [
+            { text: '序章 自检', collapsed: false, items: [
               { text: '0.1 这套教程给谁看', link: '/workbuddy/tutorial/00-序章/01-这套教程给谁看' },
               { text: '0.2 三个自检问题', link: '/workbuddy/tutorial/00-序章/02-三个自检问题' },
               { text: '0.3 能力边界一张图', link: '/workbuddy/tutorial/00-序章/03-能力边界一张图' }

@@ -447,15 +447,15 @@ body { min-width: 320px; margin: 0; overflow-x: hidden; font-family: var(--jf-bo
 }
 
 /* 宽屏时把侧栏内容对齐到正文左侧，避免布局外侧边距变成空白栏。 */
-@media (min-width: 1280px) {
+@media (min-width: 960px) {
   .VPSidebar.VPSidebar {
     padding-right: 0 !important;
   }
   .VPDoc.has-sidebar {
-    padding-left: 16px !important;
+    padding-left: 24px !important;
     padding-right: 32px !important;
   }
-  .VPDoc.has-sidebar .content {
+  .VPDoc.has-sidebar > .container > .content {
     padding-left: 0 !important;
   }
 }
