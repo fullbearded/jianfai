@@ -22,4 +22,9 @@ Thumbs.db
 
 # VitePress dev 临时文件
 docs/.vitepress/config.mts.timestamp-*.mjs
+
+# AI / 工具本地状态（含本机绝对路径，不入库）
 .gstack
+.codegraph
+.omo/
+.spec-workflow/
