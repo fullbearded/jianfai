@@ -17,7 +17,7 @@ description: "用 WorkBuddy 做自动化之前，先用三个自检问题和一�
 
 ## 章节目录
 
-1. [0.1 这套教程给谁看、不给谁看](/workbuddy/tutorial/00-序章/01-这套教程给谁看)
+1. [0.1 这套教程适合谁：三类人该读，三类人不读](/workbuddy/tutorial/00-序章/01-这套教程给谁看)
 2. [0.2 三个自检问题：你的场景值不值得自动化](/workbuddy/tutorial/00-序章/02-三个自检问题)
 3. [0.3 一张图看懂 WorkBuddy 的能力边界](/workbuddy/tutorial/00-序章/03-能力边界一张图)
 
@@ -29,3 +29,4 @@ description: "用 WorkBuddy 做自动化之前，先用三个自检问题和一�
 ## 下一章
 
 [第一章 入门：先把 WorkBuddy 用起来](/workbuddy/tutorial/01-入门/)
+

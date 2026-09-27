@@ -1,4 +1,4 @@
-# WorkBuddy 栏目 SEO 优化报告
+# SEO
 
 > 日期：2026-09-27 · 范围：`docs/workbuddy/`（1 栏目首页 + 27 篇教程 + 5 幕目录 + 4 附录 + 4 附录目录页）+ VitePress 工程配置
 

@@ -46,7 +46,7 @@ description: "WorkBuddy（腾讯 AI 办公工作台）教程总览：自检、�
 
 ### 序章 · 自检：先想清楚值不值得做
 
-- [0.1 这套教程给谁看、不给谁看](/workbuddy/tutorial/00-序章/01-这套教程给谁看)
+- [0.1 这套教程适合谁：三类人该读，三类人不读](/workbuddy/tutorial/00-序章/01-这套教程给谁看)
 - [0.2 三个自检问题：你的场景值不值得自动化](/workbuddy/tutorial/00-序章/02-三个自检问题)
 - [0.3 一张图看懂 WorkBuddy 的能力边界](/workbuddy/tutorial/00-序章/03-能力边界一张图)
 
